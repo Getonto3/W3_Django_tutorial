@@ -18,3 +18,11 @@ def mySelf(request):
         'members':members,   
     }
     return HttpResponse(template.render(context, request))
+
+def details(request,id):
+    members=MySelf.objects.get(id=id)
+    template=loader.get_template('details.html')
+    context = {
+        'members': members,
+    }
+    return HttpResponse(template.render(context, request))
