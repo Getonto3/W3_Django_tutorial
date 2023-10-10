@@ -11,7 +11,7 @@ def mySelf(request):
     template =loader.get_template('first.html')
     return HttpResponse(template.render())
 
-def mySelf(request):
+def members(request):
     members= MySelf.objects.all().values()
     template=loader.get_template('members.html')
     context ={
