@@ -25,7 +25,7 @@ def details(request,id):
     context = {
         'members': members,
     }
-    return render('details.html',context, request)
+    return HttpResponse(template.render(context, request))
 
 def main(request):
     template = loader.get_template('main.html')
