@@ -1,3 +1,11 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <link rel="stylesheet" href="{% static 'global.css' %}">
+<body>
+
+<p>Loop through the items:</p>
+
 <table border='1'>
   <tr>
     <th>ID</th>
@@ -7,8 +15,10 @@
   {%for x in Members %}
     <tr>
       <td>{{ x.id }}</td>
-        <td>{{ x.firstName }}</td>
+      <td>{{ x.firstName }}</td>
       <td>{{ x.lastName }}</td>
     </tr>
   {% endfor %}
 </table>
+</body>
+</html> 

@@ -32,7 +32,7 @@ def main(request):
     return HttpResponse(template.render())
     
 def testing(request):
-  mydata=MySelf.objects.all()
+  mydata=MySelf.objects.values()
   template = loader.get_template('template.html')
   context = {
     'Members': mydata,
