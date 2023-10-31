@@ -5,10 +5,11 @@
 {% endblock %}
 
 {% block content%}
-<p><a href="/">HOME</a></p>
+<div class="mycard">
     <h1>{{members.firstName}} {{members.lastName}}</h1>
 
     <p>Nick Name: {{members.nickName}}</p>
     <p>Admission Number: {{members.admNo}}</p>
     <p>Back to <a href="{% url 'members' %}">Members</a></p>
+</div>
 {% endblock %}

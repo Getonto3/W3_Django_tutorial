@@ -5,11 +5,12 @@
 {% endblock %}
 
 {% block content%}
-<p><a href="/">HOME</a></p>
+<div class="mycard">
     <h1>Members</h1>
     <ul>
         {%for x in members%}
         <li><a href="{% url 'details' x.id  %}">{{x.firstName}} {{x.lastName}}</a></li>
         {% endfor %}
     </ul>
+  </div>
 {% endblock %}
