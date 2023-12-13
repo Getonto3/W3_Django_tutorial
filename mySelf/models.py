@@ -6,6 +6,7 @@ class MySelf(models.Model):
     lastName = models.CharField(max_length=255)
     nickName=models.CharField(max_length=255,null=True)
     admNo=models.IntegerField(null=True)
+    age=models.IntegerField(null=True)
 
     '''def __str__(self):
         return f"{self.firstName} {self.lastName}"'''
